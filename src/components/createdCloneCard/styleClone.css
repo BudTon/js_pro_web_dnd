@@ -1,0 +1,10 @@
+.card-clone {
+  color: #000;
+  opacity: 1;
+  min-height: 40px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}

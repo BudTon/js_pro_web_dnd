@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding-top: 10px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.forms {
+  min-height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5882f5;
+}
+
+.planner {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-around;
+  margin: 1vh;
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 224, 224);
+  width: 30%;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: 1px solid;
+  margin: 5vh 1vh 1vh 1vh;
+  height: 100%;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item {
+  min-height: 40px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  background-color: white;
+  cursor: grab;
+  position: relative;
+}
+
+.dragged:active {
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  background-color: rgb(134, 178, 234);
+}
+
+.dragged:after {
+  cursor: grabbing;
+}
+/* .card-item:active {
+  pointer-events: auto;
+  cursor: grabbing;
+} */
+
+.card-item:hover .card-close:after {
+  display: block;
+}
+
+.card-item:hover {
+  background-color: lightsteelblue;
+}
+
+.textarea {
+  border: none;
+}
+
+.add-card {
+  background-color: rgb(230, 224, 224);
+  font-size: small;
+}
+
+.add-card:hover {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-add {
+  margin: 5px 0 5px 0;
+  background-color: rgb(11, 243, 11);
+  cursor: pointer;
+  width: 50%;
+}
+
+.btn-add-close {
+  margin: 5px 0 5px 10px;
+  background-color: rgb(243, 11, 11);
+  border-radius: 20%;
+  opacity: 0.8;
+  cursor: pointer;
+  min-width: 20px;
+  width: 7%;
+}
+
+.card-close {
+  position: absolute;
+  margin-top: -4px;
+  right: 0;
+  z-index: 100;
+  }
+
+.card-close:hover {
+  cursor: pointer;
+}
+
+.card-close:after {
+  content: '\00D7';
+  display: none;
+}
+
+.card-title {
+  padding: 4px;
+}
+
+.hidden {
+  display: none;
+}
