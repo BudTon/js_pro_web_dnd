@@ -12,9 +12,9 @@
 
 ### Trello
 
-![CI](https://github.com/BudTon/js_pro_web_DnD/actions/workflows/web.yml/badge.svg)
+![CI](https://github.com/BudTon/js_pro_web_dnd/actions/workflows/web.yml/badge.svg)
 
-[GitHub Pages](https://budton.github.io/js_pro_web_DnD/)
+[GitHub Pages](https://budton.github.io/js_pro_web_dnd/)
 
 #### Легенда
 
