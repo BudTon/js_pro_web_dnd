@@ -19,6 +19,7 @@ export default function inputTitleCard(cardList) {
     inputText.remove();
     StorageElement.setStorage(addCard);
   };
+  
   btnAddClose.onclick = function clickAddClose() {
     btnBox.classList.add('hidden');
     addCard.classList.remove('hidden');
