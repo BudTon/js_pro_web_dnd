@@ -12,6 +12,7 @@ export default function inputTitleCard(cardList) {
   btnBox.classList.remove('hidden');
   const btnAdd = btnBox.firstChild;
   const btnAddClose = btnAdd.nextElementSibling;
+
   btnAdd.onclick = function clickAdd() {
     btnBox.classList.add('hidden');
     addCard.classList.remove('hidden');
@@ -19,12 +20,22 @@ export default function inputTitleCard(cardList) {
     inputText.remove();
     StorageElement.setStorage(addCard);
   };
-  
-  btnAddClose.onclick = function clickAddClose() {
+
+  btnAddClose.addEventListener('click', (e) => {
+    e.preventDefault();
     btnBox.classList.add('hidden');
     addCard.classList.remove('hidden');
     inputText.remove();
-  };
+  });
+
+  // onclick = function clickAddClose() {
+  //   this.target = undefined
+  //   inputText.remove();
+  // };
+  // btnAddClose.onclick = function clickAddClose() {
+  //   this.target = undefined
+  //   inputText.remove();
+  // };
 }
 
 function markup() {

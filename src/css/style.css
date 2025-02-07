@@ -80,13 +80,17 @@ h3 {
   background-color: rgb(134, 178, 234);
 }
 
+/* .dragged {
+pointer-events: none;
+} */
+
 .dragged:after {
   cursor: grabbing;
 }
-/* .card-item:active {
-  pointer-events: auto;
+.card-item:active {
+  /* pointer-events: auto; */
   cursor: grabbing;
-} */
+}
 
 .card-item:hover .card-close:after {
   display: block;
