@@ -97,7 +97,7 @@ export default class dragoverHandler {
       && e.target.querySelectorAll('.card-item').length === 0
       && this.actualElement !== undefined) {
       this.deleteClone();
-      e.target.querySelector('.card-list').insertAdjacentHTML('afterend', this.cloneElement);
+      e.target.querySelector('.card-list').insertAdjacentHTML('afterbegin', this.cloneElement);
     }
 
     if (this.target !== undefined && this.actualElement !== undefined) {
