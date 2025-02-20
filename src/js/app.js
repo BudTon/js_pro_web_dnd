@@ -2,18 +2,17 @@
 import CreatedElement from '../components/createdElements/createdElement.class';
 import addCard from '../components/addCard';
 import { StorageElement } from '../components/localStorage/StorageElement.class';
-import dragoverHandler from '../components/dragoverHandler';
+import DragoverHandler from '../components/DragoverHandler.class';
 
 const parent = document.querySelector('.container');
 /* eslint-disable no-new */
 new CreatedElement(parent);
 
-/* eslint-disable  new-cap */
-const dragover = new dragoverHandler();
-dragover.start();
+/* eslint-disable no-new */
+new DragoverHandler();
 
-const addClic = document.querySelectorAll('.plan-list .add-card');
-addClic.forEach((addItem) => {
+const addClick = document.querySelectorAll('.plan-list .add-card');
+addClick.forEach((addItem) => {
   if (StorageElement.getStorage(addItem) !== null) {
     addItem.previousElementSibling.insertAdjacentHTML('beforeend', StorageElement.getStorage(addItem));
   }
@@ -32,14 +31,3 @@ addClic.forEach((addItem) => {
   });
 });
 
-// document.addEventListener('mousedown', (e) => {
-//   e.preventDefault();
-
-//   const closeElement = e.target;
-//   console.log(closeElement.parentElement);
-//   const addBtn = closeElement.parentElement.parentElement.nextElementSibling;
-//   if (closeElement.classList.contains('card-close')) {
-//     closeElement.parentElement.remove();
-//     StorageElement.setStorage(addBtn);
-//   }
-// });

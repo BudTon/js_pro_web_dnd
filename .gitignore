@@ -1,6 +1,7 @@
 dist
 doc
 temp
+dragoverHandler_copy.js
 
 # Logs
 logs

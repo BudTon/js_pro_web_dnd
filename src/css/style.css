@@ -1,3 +1,5 @@
+@import url(../components/createdCloneCard/styleClone.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -69,27 +71,14 @@ h3 {
   border: 1px solid black;
   margin-bottom: 5px;
   background-color: white;
-  cursor: grab;
   position: relative;
 }
 
-.dragged:active {
+.dragged {
   position: absolute;
   z-index: 999;
   pointer-events: none;
   background-color: rgb(134, 178, 234);
-}
-
-/* .dragged {
-pointer-events: none;
-} */
-
-.dragged:after {
-  cursor: grabbing;
-}
-.card-item:active {
-  /* pointer-events: auto; */
-  cursor: grabbing;
 }
 
 .card-item:hover .card-close:after {
@@ -98,6 +87,7 @@ pointer-events: none;
 
 .card-item:hover {
   background-color: lightsteelblue;
+  cursor: grab;
 }
 
 .textarea {
@@ -137,7 +127,7 @@ pointer-events: none;
   margin-top: -4px;
   right: 0;
   z-index: 100;
-  }
+}
 
 .card-close:hover {
   cursor: pointer;

@@ -27,15 +27,6 @@ export default function inputTitleCard(cardList) {
     addCard.classList.remove('hidden');
     inputText.remove();
   });
-
-  // onclick = function clickAddClose() {
-  //   this.target = undefined
-  //   inputText.remove();
-  // };
-  // btnAddClose.onclick = function clickAddClose() {
-  //   this.target = undefined
-  //   inputText.remove();
-  // };
 }
 
 function markup() {
