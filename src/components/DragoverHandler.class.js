@@ -26,12 +26,13 @@ export default class DragoverHandler {
   mouseDown(e) {
     e.preventDefault();
     this.deleteClone();
+    let cardClose = 0;
     if (e.target.classList.contains('card-close')
       && e.target.closest('.plan-list') !== null) {
       const addBtn = e.target.closest('.plan-list').querySelector('.add-card');
       e.target.parentElement.remove();
       StorageElement.setStorage(addBtn);
-      return
+      cardClose = 1; 
     }
 
     if (!e.target.parentElement.classList.contains('card-item')) return;
@@ -41,7 +42,8 @@ export default class DragoverHandler {
     const { top, left } = this.actualElement.getBoundingClientRect();
     this.shiftY = e.pageY + top;
     this.shiftX = e.pageX + left;
-    if (this.actualElement.classList.contains('card-item')) {
+    if (this.actualElement.classList.contains('card-item')
+      && cardClose === 0) {
       this.cloneElement = createdCloneCard(this.actualElement);
       this.startGrab(e);
       this.target = this.actualElement;
@@ -56,7 +58,10 @@ export default class DragoverHandler {
 
   onMouseMove(e) {
     e.preventDefault();
-    if (this.actualElement === undefined || !this.actualElement.classList.contains('card-item')) return;
+    if (this.actualElement === undefined || !this.actualElement.classList.contains('card-item')) {
+      this.deleteClone();
+      return
+    };
 
     this.startGrab(e);
 
